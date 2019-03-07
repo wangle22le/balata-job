@@ -1,0 +1,28 @@
+server:
+  port: 18888
+spring:
+  application:
+    name: balata-job
+  batch:
+    job:
+      enabled: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    tomcat:
+      max-active: 30
+      max-wait: 10000
+      test-on-borrow: true
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    url: jdbc:mysql://39.97.162.173:3306/balata-job?Unicode=true&characterEncoding=UTF-8&useSSL=false
+job:
+  accessToken: ''
+  admin:
+    addresses: http://39.97.162.173:20201/job-admin
+  executor:
+    appname: balata-job-executor
+    ip: '39.97.162.173'
+    logpath: /data/logs/balata-job
+    logretentiondays: -1
+    port: 9999
